@@ -176,38 +176,3 @@
 
 </body>
 </html>
-        <p style="padding: 20px; color: #590d22;">باقي شي واحد أخير لازم تشوفيه..</p>
-        <a href="رابط_موقع_GitHub_الذي_صنعناه_سابقاً" class="final-link" id="finalBtn">اضغطي هنا 💌</a>
-    </div>
-
-    <script>
-        function nextStep(current, next) {
-            document.getElementById(current).style.display = 'none';
-            document.getElementById(next).style.display = 'block';
-        }
-
-        function showRetry() {
-            document.getElementById('q3').style.display = 'none';
-            document.getElementById('retry').style.display = 'block';
-        }
-
-        function startAlbum() {
-            document.getElementById('survey').style.display = 'none';
-            document.getElementById('album').style.display = 'block';
-            
-            // إظهار الصور بشكل تدريجي عند التمرير
-            const frames = document.querySelectorAll('.photo-frame');
-            frames.forEach((frame, index) => {
-                setTimeout(() => {
-                    frame.classList.add('show');
-                    if(index === frames.length - 1) {
-                        setTimeout(() => {
-                            document.getElementById('finalBtn').style.display = 'inline-block';
-                        }, 1500);
-                    }
-                }, index * 1500); // تظهر صورة كل ثانية ونصف
-            });
-        }
-    </script>
-</body>
-</html>
